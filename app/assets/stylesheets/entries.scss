@@ -1,3 +1,36 @@
 // Place all the styles related to the Entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.page-title {
+  letter-spacing: 0.2rem;
+  padding: calc(10 * var(--grid-base));
+}
+
+.list-wrapper {
+  height: 80vh;
+	max-width: 500px;
+  width: 60vw;
+}
+
+.list-item {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding: calc(4 * var(--grid-base)) calc(4 * var(--grid-base));
+}
+
+.entry-title {
+  font-weight: 300;
+  font-size: var(--font-size-s);
+  font-style: italic;
+}
+
+.entry-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.index {
+  font-size: var(--font-size-l);
+}

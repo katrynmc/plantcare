@@ -75,9 +75,11 @@ table {
 	--secondary: rgb(103, 151, 202);
 	--background: #DBDAE0;
 
-	/* Sizes */
+	/* Font Sizes */
+	--font-size-s: 0.9rem;
+	--font-size-m: 1rem;
+	--font-size-l: 2rem;
 	--font-size-xl: 6rem;
-
 
 	/* Spacing */
 	--grid-base: 4px;
@@ -90,12 +92,18 @@ body {
 	background-color: var(--background);
 	color: var(--primary);
 	font-family: 'Montserrat', sans-serif;
+	font-size: var(--font-size-m);
 }
 
 a {
 	background-color: var(--primary);
 	color: var(--background);
-	margin: calc(6 * var(--grid-base));
 	padding: var(--grid-base) calc(8 * var(--grid-base));
 	text-decoration: none;
+}
+
+.basic-page {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 }
