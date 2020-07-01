@@ -74,6 +74,7 @@ table {
 	--primary: rgb(59, 59, 59, 0.95);
 	--secondary: rgb(103, 151, 202);
 	--background: #DBDAE0;
+	--shadow: rgb(59, 59, 59, 0.1);
 
 	/* Font Sizes */
 	--font-size-s: 0.9rem;
@@ -103,14 +104,35 @@ body {
 }
 
 a {
+	text-decoration: none;
+}
+
+.primary-link {
 	background-color: var(--primary);
 	color: var(--background);
 	padding: var(--grid-base) calc(8 * var(--grid-base));
-	text-decoration: none;
 }
 
 .basic-page {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+}
+
+.home-link {
+	display: block;
+	color: var(--primary);
+	padding: calc(4 * var(--grid-base));
+}
+
+.glyph{
+	transition: transform 1s;
+}
+
+.home-link:hover {
+	background-color: var(--shadow);
+}
+
+.home-link:hover > .glyph {
+	transform: rotate(90deg);
 }

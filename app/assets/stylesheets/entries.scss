@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.home {
+  position: absolute;
+  top: 0;
+  left: calc(5 * var(--grid-base));
+}
+
 .page-title {
   letter-spacing: 0.2rem;
   padding: calc(10 * var(--grid-base));

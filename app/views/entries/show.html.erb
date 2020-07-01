@@ -1,5 +1,10 @@
 <div class="basic-page">
   <header>
+    <span class="home">
+      <%= link_to root_path, class: "home-link" do %>
+        <div class="glyph">&empty;</div>
+      <% end %>
+    </span>
     <h1 class="page-title"><%= @entry.title.upcase %></h1>
   </header>
 
@@ -10,5 +15,5 @@
     </div>
   </main>
 
- <footer class="footer"><%= link_to 'Index', entries_path %></footer>
+ <footer class="footer"><%= link_to 'Index', entries_path, class: "primary-link" %></footer>
 </div>
