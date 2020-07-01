@@ -1,3 +1,27 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.title-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 25vh;
+}
+
+.title-block {
+  align-items: center;
+  border-radius: var(--border-radius);
+  border: 6px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  padding: calc(4 * var(--grid-base)) calc(9 * var(--grid-base)) calc(9 * var(--grid-base));
+}
+
+.project-title {
+  font-size: var(--font-size-xl);
+}
+
+.project-sub-title {
+  letter-spacing: .2rem;
+}
