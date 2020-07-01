@@ -1,17 +1,21 @@
 <div class="basic-page">
-  <h1 class="page-title">ENTRIES</h1>
+  <header>
+    <h1 class="page-title">INDEX</h1>
+  </header>
 
-  <ul class="list-wrapper">
+  <main class="content">
+    <ul class="list-wrapper">
 
-    <% @entries.each.with_index do |entry, index| %>
-      <li class="list-item">
-        <div class="entry-title-block">
-          <div class="index"><%= index %></div>
-          <div class="entry-title"><%= entry.title %></div>
-        </div>
-        <%= link_to 'View', entry_path(entry) %>
-      </li>
-    <% end %>
+      <% @entries.each.with_index do |entry, index| %>
+        <li class="list-item">
+          <div class="entry-title-block">
+            <div class="index"><%= index %></div>
+            <div class="entry-title"><%= entry.title %></div>
+          </div>
+          <%= link_to 'View', entry_path(entry) %>
+        </li>
+      <% end %>
 
-  </ul>
+    </ul>
+  </main>
 </div>
