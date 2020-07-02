@@ -74,6 +74,7 @@ table {
 	--primary: rgb(59, 59, 59, 0.95);
 	--secondary: rgb(103, 151, 202);
 	--background: #DBDAE0;
+	--light: #efefef;
 	--shadow: rgb(59, 59, 59, 0.1);
 
 	/* Font Sizes */
@@ -81,6 +82,8 @@ table {
 	--font-size-m: 1rem;
 	--font-size-l: 2rem;
 	--font-size-xl: 6rem;
+
+	--font-family: 'Montserrat', sans-serif;
 
 	/* Spacing */
 	--grid-base: 4px;
@@ -97,7 +100,7 @@ body {
 	background-color: var(--background);
 	color: var(--primary);
 	display: grid;
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--font-family);
 	font-size: var(--font-size-m);
 	grid-template-rows: 100px auto 100px;
 	min-height: 100%;
@@ -166,4 +169,31 @@ a {
 
 .home-link:hover > .glyph {
 	transform: rotate(90deg);
+}
+
+input, textarea {
+	background: var(--light);
+	border: none;
+	border-radius: var(--border-radius);
+	font-family: var(--font-family);
+	margin-bottom: calc(6 * var(--grid-base));
+	min-width: 300px;
+	padding: calc(2 * var(--grid-base)) calc(4 * var(--grid-base));
+}
+
+input[type="submit"] {
+	background: transparent;
+	border: 1px solid var(--primary);
+	cursor: pointer;
+	font-family: var(--font-family);
+	min-width: 0;
+  padding: calc(2 * var(--grid-base)) calc(4 * var(--grid-base));
+}
+
+input[type="submit"]:focus {
+  outline: 1px dashed var(--secondary);
+}
+
+input[type="submit"]:hover {
+	background-color: var(--shadow);
 }

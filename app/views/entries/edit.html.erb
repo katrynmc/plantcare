@@ -1,5 +1,14 @@
-<h1>Edit Entry</h1>
+<header>
+  <span class="home">
+    <%= link_to root_path, class: "home-link" do %>
+      <div class="glyph">&empty;</div>
+    <% end %>
+  </span>
+  <h1 class="page-title">EDIT ENTRY</h1>
+</header>
 
-<%= render 'form' %>
+<main class="content">
+  <%= render 'form' %>
+</main>
 
-<%= link_to 'Back', entries_path %>
+<footer class="footer"><%= link_to 'Index', entries_path, class: "primary-link" %></footer>

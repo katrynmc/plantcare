@@ -46,6 +46,6 @@ class EntriesController < ApplicationController
 
   private
     def entry_params
-      params.require(:entry).permit(:title, :text)
+      params.require(:entry).permit(:title, :text, :leaf_count, :plant_observations, :date)
     end
 end

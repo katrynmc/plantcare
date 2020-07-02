@@ -15,8 +15,23 @@
   <% end %>
 
   <p>
+    <%= form.label :date %><br>
+    <%= form.date_field :date %>
+  </p>
+
+  <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :leaf_count %><br>
+    <%= form.text_field :leaf_count %>
+  </p>
+
+  <p>
+    <%= form.label :plant_observations %><br>
+    <%= form.text_area :plant_observations %>
   </p>
 
   <p>
