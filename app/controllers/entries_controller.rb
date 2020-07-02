@@ -1,4 +1,6 @@
 class EntriesController < ApplicationController
+  http_basic_authenticate_with name: ENV["EDITOR_NAME"], password: ENV["EDITOR_PASSWORD"], except: [:index, :show]
+
   def index
     @entries = Entry.all
   end
