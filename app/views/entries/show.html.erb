@@ -1,19 +1,26 @@
-<div class="basic-page">
-  <header>
-    <span class="home">
-      <%= link_to root_path, class: "home-link" do %>
-        <div class="glyph">&empty;</div>
-      <% end %>
-    </span>
-    <h1 class="page-title"><%= @entry.title.upcase %></h1>
-  </header>
+<header>
+  <span class="home">
+    <%= link_to root_path, class: "home-link" do %>
+      <div class="glyph">&empty;</div>
+    <% end %>
+  </span>
+  <h1 class="page-title"><%= @entry.title.upcase %></h1>
+</header>
 
-  <main class="content">
-    <div class="general-notes">
-      <h2>Notes</h2>
-      <p class="note-entry"><%= @entry.text %></p>
-    </div>
-  </main>
+<main class="content">
+  <div class="general-notes">
+    <h2>Date</h2>
+    <p class="note-entry"><%= @entry.text %></p>
 
- <footer class="footer"><%= link_to 'Index', entries_path, class: "primary-link" %></footer>
-</div>
+    <h2>Plant Observations</h2>
+    <p class="note-entry"><%= @entry.text %></p>
+
+    <h2>Leaf Count</h2>
+    <p class="note-entry"><%= @entry.text %></p>
+
+    <h2>Other</h2>
+    <p class="note-entry"><%= @entry.text %></p>
+  </div>
+</main>
+
+<footer class="footer"><%= link_to 'Index', entries_path, class: "primary-link" %></footer>

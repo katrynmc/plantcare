@@ -1,26 +1,24 @@
-<div class="basic-page">
-  <header>
-    <span class="home">
-      <%= link_to root_path, class: "home-link" do %>
-        <div class="glyph">&empty;</div>
-      <% end %>
-    </span>
-    <h1 class="page-title">INDEX</h1>
-  </header>
+<header class="header">
+  <span class="home">
+    <%= link_to root_path, class: "home-link" do %>
+      <div class="glyph">&empty;</div>
+    <% end %>
+  </span>
+  <h1 class="page-title">INDEX</h1>
+</header>
 
-  <main class="content">
-    <ul class="list-wrapper">
+<main class="content">
+  <ul class="list-wrapper">
 
-      <% @entries.each.with_index do |entry, index| %>
-        <li class="list-item">
-          <div class="entry-title-block">
-            <div class="entry-index"><%= index %></div>
-            <div class="entry-title"><%= entry.title %></div>
-          </div>
-          <%= link_to 'View', entry_path(entry), class: "primary-link" %>
-        </li>
-      <% end %>
+    <% @entries.each.with_index do |entry, index| %>
+      <li class="list-item">
+        <div class="entry-title-block">
+          <div class="entry-index"><%= index %></div>
+          <div class="entry-title"><%= entry.title %></div>
+        </div>
+        <%= link_to 'View', entry_path(entry), class: "primary-link" %>
+      </li>
+    <% end %>
 
-    </ul>
-  </main>
-</div>
+  </ul>
+</main>

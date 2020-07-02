@@ -2,16 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.home {
-  position: absolute;
-  top: 0;
-  left: calc(5 * var(--grid-base));
-}
-
-.page-title {
-  letter-spacing: 0.2rem;
-  padding: calc(10 * var(--grid-base));
-}
+// Index
 
 .list-wrapper {
 	max-width: 500px;
@@ -40,23 +31,20 @@
   font-size: var(--font-size-l);
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60vw;
-}
 
-.footer {
-  grid-row-start: 2;
-  grid-row-end: 3;
+// Show
+
+.section-heading {
+
 }
 
 .general-notes {
-  width: 100%;
+	max-width: 500px;
+  width: 60vw;
 }
 
 .note-entry {
   font-weight: 300;
   font-style: italic;
+  margin-bottom: calc(6 * var(--grid-base));
 }
