@@ -22,7 +22,7 @@
     <p class="note-entry"><%= @entry.plant_observations %></p>
 
     <h2>Leaf Count</h2>
-    <p class="note-entry"><%= @entry.leaf_count %></p>
+    <p class="note-entry"><%= @entry.leaf_count ||= "-" %></p>
 
     <h2>Other</h2>
     <p class="note-entry"><%= @entry.text %></p>
