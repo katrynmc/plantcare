@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_012756) do
+ActiveRecord::Schema.define(version: 2020_07_03_002947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artifacts", force: :cascade do |t|
+    t.string "src"
+    t.bigint "entry_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["entry_id"], name: "index_artifacts_on_entry_id"
+  end
 
   create_table "entries", force: :cascade do |t|
     t.string "title"
@@ -25,4 +33,5 @@ ActiveRecord::Schema.define(version: 2020_07_02_012756) do
     t.date "date"
   end
 
+  add_foreign_key "artifacts", "entries"
 end

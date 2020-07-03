@@ -44,3 +44,17 @@
   font-style: italic;
   margin-bottom: calc(6 * var(--grid-base));
 }
+
+.media {
+  background-color: var(--light);
+  height: 200px;
+  margin: calc(2 * var(--grid-base));
+  padding: calc(2 * var(--grid-base));
+}
+
+.media-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: calc(10 * var(--grid-base));
+}

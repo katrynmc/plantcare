@@ -8,6 +8,12 @@
 </header>
 
 <main class="content">
+  <div class="media-block">
+    <% @entry.artifacts.each do |artifact| %>
+      <%= image_tag(artifact.src, class: "media") %>
+    <% end %>
+  </div>
+
   <div class="general-notes">
     <h2>Date</h2>
     <p class="note-entry"><%= @entry.date %></p>

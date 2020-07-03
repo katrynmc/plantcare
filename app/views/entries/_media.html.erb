@@ -1,0 +1,10 @@
+<h2>Add media:</h2>
+<%= form_with model: [ @entry, @entry.artifacts.build ], local: true do |form| %>
+  <p>
+    <%= form.label :src %><br>
+    <%= form.text_field :src %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
