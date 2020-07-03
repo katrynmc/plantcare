@@ -10,7 +10,7 @@ class EntriesController < ApplicationController
   end
 
   def new
-    @entry = Entry.new
+    @entry = Entry.new(date: Date.today)
   end
 
   def edit
