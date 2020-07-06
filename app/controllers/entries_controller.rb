@@ -7,6 +7,12 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find(params[:id])
+
+    entries = Entry.all.sort_by &:date
+    current_index = entries.find_index { |entry| entry.id == @entry.id }
+
+    @next = current_index < entries.length - 1 ? current_index + 1 : current_index
+    @previous = current_index > 0 ? current_index - 1 : 0
   end
 
   def new
